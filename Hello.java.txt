@@ -1,0 +1,28 @@
+public class Main
+{
+    private static string s="example of static class";
+    int a=10;
+    static class nested
+    {
+        public void show()
+        {
+            System.out.println(s);
+        }
+    }
+    class InnerClass
+    {
+        public void display()
+        {
+            System.out.println(s);
+            System.out.println(a);
+        }
+    }
+    public static void main(String args[])
+    {
+        Main.nested obj=new Main.nested();
+        obj.show();
+        Main m=new Main();
+        Main.InnerClass obj1=m.new InnerClass();
+        obj1.display();
+    }
+}
